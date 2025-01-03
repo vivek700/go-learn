@@ -1,5 +1,0 @@
-  fileServer := http.FileServer(http.FS(web.Files))
-  r.Handler(http.MethodGet, "/assets/*filepath", fileServer)
-  r.Handler(http.MethodGet, "/web", templ.Handler(web.HelloForm()))
-  r.HandlerFunc(http.MethodPost, "/hello", web.HelloWebHandler)
-  
